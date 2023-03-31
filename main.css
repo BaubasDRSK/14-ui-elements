@@ -8,55 +8,82 @@ body{
     display:flex;
     flex-wrap:wrap;
     justify-content:space-around;
-    gap:30px;
+    gap:7vw;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px ;
     background-color: #C9D3DF;
     padding-top:40px;
     color:#888;
-
-}
-
-body>div{
-    width:200px;
-    height:200px;
-    background-color: white;
+    padding-left:7vw;
+    padding-right:7vw;
     position:relative;
 }
 
-.konteineris1{
-    margin-top:55px;
-    width:200px;
-    height:95px;
-    
+body>div{
+    width:22vw;
+    height:22vw;
+    min-width:150px;
+    min-height:150px;
+    max-width:300px;
+    max-height:300px;
+    position:relative;
+    object-fit: contain;
 }
 
-.mask{
-    position: relative;
-z-index: 3;
-}
-.progress-wrapp{
-    width:140px;
-    height:67px;
-    overflow: hidden;
-    position: absolute;
-    top:69px;
-    left:30px;
-}
-.progress{
-    z-index: 1;
-    transform: rotate(90deg);
-    animation: rotation 4s infinite linear;
+.pirmas{
+    text-align: center;
+    display: grid;
+    grid-template-rows: 50% 50%;
 }
 
-.rodykle{
-    z-index:5;
+.pirmas .title{
+    font-size:20px;
+    display:block;
+    margin:9%    auto;
+    display:flex;
+    justify-content: space-around;
+}
+
+.pirmas .title::before{
+    content: "<";
+    padding:0 10%;
+}
+
+.pirmas .title::after{
+    content: ">";
+    padding:0 10%;
+}
+
+
+.bar-img{
     position:absolute;
-    top:109px;
-    left:70px;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+.mask-img{
+    z-index: -2;
+}
+
+.progress-img{
+    z-index: -3;
     animation: rotation 4s infinite linear;
+}
 
+.arrow-img{
+    z-index:-1;
+    animation: rotation 4s infinite linear;
+}
 
+.info{
+    align-self: end;
+    padding-bottom:24%; 
+    font-weight: normal;
+}
+
+.info span {
+    font-weight: bold;
 }
 
 @keyframes rotation{
