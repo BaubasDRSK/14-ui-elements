@@ -1,0 +1,115 @@
+/* ********** KETVIRTAS******************** */
+.ketvirtas{
+    --p1:25;
+    --p2:40;
+    --p3:15;
+    --p4:20;
+    position: relative;
+
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top:25px;
+  }
+
+  .pie-chart2{
+    position: absolute;
+    width:70%;
+    top:25%;
+    left:15%;
+    aspect-ratio: 1;
+
+}
+
+  .slice1, .slice2, .slice3, .slice4{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+  }
+
+  .slice1{
+    background-color: red;
+    -webkit-mask:conic-gradient(#000 calc(var(--p1)*1%),#0000 0);
+    animation:pppp 3s infinite ease-in-out;
+
+}
+
+  .slice2 {
+    background-color: green;
+    transform: rotate(calc(var(--p1) * 3.6deg));
+    -webkit-mask:conic-gradient(#000 calc(var(--p2)*1%),#0000 0);
+    animation:pppp 3s infinite ease-in-out;
+
+}
+
+  .slice3 {
+    background-color: yellow;
+    transform: rotate(calc((var(--p1) + var(--p2)) * 3.6deg));
+    -webkit-mask:conic-gradient(#000 calc(var(--p3)*1%),#0000 0);
+    animation:pppp 3s infinite ease-in-out;
+
+}
+
+  .slice4 {
+    background-color: pink;
+    transform: rotate(calc((var(--p1) + var(--p2) + var(--p3)) * 3.6deg));
+    -webkit-mask:conic-gradient(#000 calc(var(--p4)*1%),#0000 0);
+    animation:pppp 3s infinite ease-in-out;
+}
+
+.pie-chart2>*::after {
+    content: "xx %";
+    position: absolute;
+    /* padding-bottom:calc(var(--p4)*1px); */
+    top:30px;
+    left:100px;
+    transform: rotate(90deg);
+    color: white;
+}
+
+
+
+
+  @property --p1{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  @property --p2{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  @property --p3{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  @property --p4{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+
+
+  @keyframes pppp {
+    0% {
+        --p1:0;
+        --p2:90;
+        --p3:5;
+        --p4:5;
+    }
+    60% {
+        --p1:60;
+        --p2:10;
+        --p3:30;
+        --p4:0;
+    }
+    100% {
+        --p1:0;
+        --p2:90;
+        --p3:5;
+        --p4:5;
+    }
+}

@@ -1,0 +1,86 @@
+/* ******************PRIMAS ******************** */
+.pirmas{
+    text-align: center;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    overflow:hidden;
+}
+
+.pirmas .title{
+    font-size:20px;
+    display:block;
+    margin:9%    auto;
+    display:flex;
+    justify-content: space-around;
+}
+
+.pirmas .title::before{
+    content: "<";
+    padding:0 10%;
+}
+
+.pirmas .title::after{
+    content: ">";
+    padding:0 10%;
+}
+
+
+.bar-img{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+.mask-img{
+    z-index:3;
+}
+
+.progress-img{
+    z-index: 2;
+    animation: rotation 4s infinite linear;
+}
+
+.arrow-img{
+    z-index:4;
+    animation: rotation 4s infinite linear;
+}
+
+.fonas{
+    background:#C9D3DF;
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    height:100%;
+}
+
+.info{
+    align-self: end;
+    padding-bottom:24%; 
+    font-weight: normal;
+}
+
+.info span {
+    font-weight: bold;
+}
+
+@keyframes rotation{
+    0% {
+        transform:rotate(0deg);
+    }
+
+    10% {
+        transform:rotate(180deg);
+    }
+    20% {
+        transform:rotate(0deg);
+    }
+    60% {
+        transform:rotate(180deg);
+    }
+
+    100%{
+        transform:rotate(0deg);
+    }
+}
+

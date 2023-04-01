@@ -1,0 +1,87 @@
+/* ********************* Antras***************** */
+.antras {
+    --p:60;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.antras .title{
+    margin-top:40px;
+}
+
+.title span {
+    font-weight:normal;
+}
+
+.antras .bars-wrapp{
+    margin-bottom:45px;
+    width:90%;
+}
+
+.antras .lable{
+    padding:0 25px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.antras .top-layer {
+    width: 90%;
+    margin: 8px auto;
+    /* background-color:red; */
+    height: 7px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.antras .progress {
+    height:120%;
+    width:30%;
+    position:absolute;
+}
+
+.antras .background{
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+    border:#C9D3DF 2px solid;
+    background-color: #ECEFF4;
+    border-radius: 4px;;
+}
+
+.gradient1{
+    background-image: linear-gradient(to right, red , yellow);
+    animation: bar-progress 4s infinite linear;
+}
+.gradient2{
+    background-image: linear-gradient(to right, #9F34D5 , #0280D5);
+    animation: bar-progress 4s 2s infinite linear;
+
+}
+.gradient3{
+    background-image: linear-gradient(to right, #D73F59 , #9F34D5);
+    animation: bar-progress 4s 1s infinite linear;
+
+}
+
+@keyframes bar-progress {
+    0% {
+        width:0%;
+    }
+    8% {
+        width:100%;
+    }
+    16% {
+        width:0%;
+    }
+    65% {
+        width:100%;
+    }
+    100% {
+        width:0%;
+    }
+}
