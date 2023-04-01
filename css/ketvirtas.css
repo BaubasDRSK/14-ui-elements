@@ -29,14 +29,16 @@
   }
 
   .slice1{
-    background-color: red;
+    background: rgb(255,241,8);
+    background: radial-gradient(circle, rgba(255,241,8,1) 0%, rgba(255,0,0,1) 100%);
     -webkit-mask:conic-gradient(#000 calc(var(--p1)*1%),#0000 0);
     animation:pppp 3s infinite ease-in-out;
 
 }
 
   .slice2 {
-    background-color: green;
+    background: rgb(8,255,205);
+    background: radial-gradient(circle, rgba(8,255,205,1) 0%, rgba(3,33,68,1) 100%);
     transform: rotate(calc(var(--p1) * 3.6deg));
     -webkit-mask:conic-gradient(#000 calc(var(--p2)*1%),#0000 0);
     animation:pppp 3s infinite ease-in-out;
@@ -44,7 +46,8 @@
 }
 
   .slice3 {
-    background-color: yellow;
+    background: rgb(208,128,255);
+    background: radial-gradient(circle, rgba(208,128,255,1) 0%, rgba(29,13,198,1) 100%);
     transform: rotate(calc((var(--p1) + var(--p2)) * 3.6deg));
     -webkit-mask:conic-gradient(#000 calc(var(--p3)*1%),#0000 0);
     animation:pppp 3s infinite ease-in-out;
@@ -52,7 +55,8 @@
 }
 
   .slice4 {
-    background-color: pink;
+    background: rgb(189,255,128);
+    background: radial-gradient(circle, rgba(189,255,128,1) 0%, rgba(4,20,3,1) 100%);
     transform: rotate(calc((var(--p1) + var(--p2) + var(--p3)) * 3.6deg));
     -webkit-mask:conic-gradient(#000 calc(var(--p4)*1%),#0000 0);
     animation:pppp 3s infinite ease-in-out;
@@ -62,8 +66,8 @@
     content: "xx %";
     position: absolute;
     /* padding-bottom:calc(var(--p4)*1px); */
-    top:30px;
-    left:100px;
+    top:15%;
+    left:50%;
     transform: rotate(90deg);
     color: white;
 }
@@ -95,20 +99,20 @@
 
   @keyframes pppp {
     0% {
-        --p1:0;
-        --p2:90;
+        --p1:10;
+        --p2:80;
         --p3:5;
         --p4:5;
     }
     60% {
-        --p1:60;
-        --p2:10;
-        --p3:30;
-        --p4:0;
+        --p1:45;
+        --p2:15;
+        --p3:25;
+        --p4:15;
     }
     100% {
-        --p1:0;
-        --p2:90;
+        --p1:10;
+        --p2:80;
         --p3:5;
         --p4:5;
     }
